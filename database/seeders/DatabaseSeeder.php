@@ -23,5 +23,14 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make(env('ADMIN_PASSWORD')),
             ]
         );
+
+            // Andere seeders uitvoeren
+        $this->call([
+            EducationSeeder::class,
+            MediaSeeder::class,
+            PersonaliaSeeder::class,
+            SkillSeeder::class,
+            WorkExperienceSeeder::class,
+        ]);
     }
 }
