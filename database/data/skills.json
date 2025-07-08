@@ -1,0 +1,353 @@
+[
+   {
+      "id": "2",
+      "type": "rating",
+      "title": "PHP",
+      "description": "Met meer dan 9 jaar ervaring in PHP, WordPress en Laravel, heb ik brede expertise opgebouwd in het ontwikkelen van zowel maatwerkfuncties als complete webapplicaties.",
+      "rating": 9,
+      "created_at": "2025-07-08 16:49:03",
+      "updated_at": "2025-07-08 17:14:02"
+   },
+   {
+      "id": "3",
+      "type": "rating",
+      "title": "JavaScript",
+      "description": "Brede ervaring met JavaScript, van vanilla JS tot moderne frameworks zoals React – inzetbaar voor zowel interactieve interfaces als volledige front-end architecturen.",
+      "rating": 7,
+      "created_at": "2025-07-08 16:54:03",
+      "updated_at": "2025-07-08 16:54:03"
+   },
+   {
+      "id": "4",
+      "type": "rating",
+      "title": "Python",
+      "description": "Ruime ervaring met Python voor het bouwen van tools en automatiseringen: van beeldherkenning en muisbesturing tot webscrapers, image-optimalisatie en importtools voor webshops.",
+      "rating": 7,
+      "created_at": "2025-07-08 17:00:01",
+      "updated_at": "2025-07-08 17:00:01"
+   },
+   {
+      "id": "5",
+      "type": "rating",
+      "title": "Linux & Serverbeheer",
+      "description": "Ervaren in het opzetten, beheren en automatiseren van Linux-omgevingen. Dagelijks gebruik van Fedora (werkstation), en zakelijk gewerkt met CentOS, AlmaLinux en Debian. Bekwaam in Bash-scripting, serveronderhoud, optimalisatie en het draaien van hostingplatformen.",
+      "rating": 8,
+      "created_at": "2025-07-08 17:02:21",
+      "updated_at": "2025-07-08 20:11:47"
+   },
+   {
+      "id": "7",
+      "type": "rating",
+      "title": "DevOps & Tools",
+      "description": "Ervaring met Git, Docker, Nginx, SSH en cronjobs. Bekend met CI/CD-principes en inzet van tooling voor automatisering en monitoring binnen ontwikkel- en hostingomgevingen.",
+      "rating": 8,
+      "created_at": "2025-07-08 17:12:48",
+      "updated_at": "2025-07-08 17:12:48"
+   },
+   {
+      "id": "9",
+      "type": "tag",
+      "title": "Leergierig",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:08:00",
+      "updated_at": "2025-07-08 19:08:00"
+   },
+   {
+      "id": "10",
+      "type": "other",
+      "title": "Laravel",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:19:00",
+      "updated_at": "2025-07-08 19:19:00"
+   },
+   {
+      "id": "11",
+      "type": "other",
+      "title": "LiveWire",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:27:21",
+      "updated_at": "2025-07-08 19:27:21"
+   },
+   {
+      "id": "12",
+      "type": "other",
+      "title": "Tailwind",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:29:55",
+      "updated_at": "2025-07-08 19:29:55"
+   },
+   {
+      "id": "13",
+      "type": "other",
+      "title": "Postman",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:32:42",
+      "updated_at": "2025-07-08 19:32:42"
+   },
+   {
+      "id": "14",
+      "type": "other",
+      "title": "Docker",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:32:55",
+      "updated_at": "2025-07-08 19:32:55"
+   },
+   {
+      "id": "15",
+      "type": "other",
+      "title": "Proxmox",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:33:25",
+      "updated_at": "2025-07-08 19:33:25"
+   },
+   {
+      "id": "16",
+      "type": "other",
+      "title": "Grafana",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:34:14",
+      "updated_at": "2025-07-08 19:34:14"
+   },
+   {
+      "id": "17",
+      "type": "other",
+      "title": "Cloudflare",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:35:34",
+      "updated_at": "2025-07-08 19:35:34"
+   },
+   {
+      "id": "18",
+      "type": "other",
+      "title": "directadmin",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:37:04",
+      "updated_at": "2025-07-08 19:37:04"
+   },
+   {
+      "id": "19",
+      "type": "other",
+      "title": "MySQL/MariaDB",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:37:57",
+      "updated_at": "2025-07-08 19:37:57"
+   },
+   {
+      "id": "20",
+      "type": "other",
+      "title": "Uptime Kuma",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:38:36",
+      "updated_at": "2025-07-08 19:38:36"
+   },
+   {
+      "id": "21",
+      "type": "other",
+      "title": "Nginx",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:39:19",
+      "updated_at": "2025-07-08 19:39:19"
+   },
+   {
+      "id": "22",
+      "type": "other",
+      "title": "VS code",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:40:32",
+      "updated_at": "2025-07-08 19:40:32"
+   },
+   {
+      "id": "23",
+      "type": "other",
+      "title": "GIMP",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:41:59",
+      "updated_at": "2025-07-08 19:41:59"
+   },
+   {
+      "id": "24",
+      "type": "other",
+      "title": "WordPress",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:42:37",
+      "updated_at": "2025-07-08 19:42:37"
+   },
+   {
+      "id": "25",
+      "type": "other",
+      "title": "WooCommerce",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:43:00",
+      "updated_at": "2025-07-08 19:43:00"
+   },
+   {
+      "id": "26",
+      "type": "other",
+      "title": "Vaultwarden",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:44:30",
+      "updated_at": "2025-07-08 19:44:30"
+   },
+   {
+      "id": "27",
+      "type": "other",
+      "title": "HealthChecks",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:45:12",
+      "updated_at": "2025-07-08 19:45:12"
+   },
+   {
+      "id": "28",
+      "type": "other",
+      "title": "GitLab",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:46:14",
+      "updated_at": "2025-07-08 19:46:14"
+   },
+   {
+      "id": "29",
+      "type": "other",
+      "title": "GitHub",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:46:27",
+      "updated_at": "2025-07-08 19:46:27"
+   },
+   {
+      "id": "30",
+      "type": "other",
+      "title": "Fedora",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:46:54",
+      "updated_at": "2025-07-08 19:46:54"
+   },
+   {
+      "id": "31",
+      "type": "other",
+      "title": "Ubuntu",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:47:15",
+      "updated_at": "2025-07-08 19:47:15"
+   },
+   {
+      "id": "32",
+      "type": "other",
+      "title": "CentOS",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:47:43",
+      "updated_at": "2025-07-08 19:47:51"
+   },
+   {
+      "id": "33",
+      "type": "other",
+      "title": "Debian",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:48:14",
+      "updated_at": "2025-07-08 19:48:14"
+   },
+   {
+      "id": "34",
+      "type": "other",
+      "title": "Composer",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:48:40",
+      "updated_at": "2025-07-08 19:48:40"
+   },
+   {
+      "id": "35",
+      "type": "other",
+      "title": "NPM",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:49:09",
+      "updated_at": "2025-07-08 19:49:09"
+   },
+   {
+      "id": "36",
+      "type": "other",
+      "title": "HTML",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:50:02",
+      "updated_at": "2025-07-08 19:50:02"
+   },
+   {
+      "id": "37",
+      "type": "tag",
+      "title": "Klantgericht",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:50:46",
+      "updated_at": "2025-07-08 19:50:46"
+   },
+   {
+      "id": "38",
+      "type": "tag",
+      "title": "Dekend aan oplossingen",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:51:09",
+      "updated_at": "2025-07-08 19:51:09"
+   },
+   {
+      "id": "39",
+      "type": "tag",
+      "title": "Meedenkend",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:51:37",
+      "updated_at": "2025-07-08 19:51:37"
+   },
+   {
+      "id": "40",
+      "type": "tag",
+      "title": "Probleemoplossend",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:52:22",
+      "updated_at": "2025-07-08 19:52:22"
+   },
+   {
+      "id": "41",
+      "type": "tag",
+      "title": "Initiatiefrijk",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:52:45",
+      "updated_at": "2025-07-08 19:52:45"
+   },
+   {
+      "id": "42",
+      "type": "tag",
+      "title": "Systeemdenker",
+      "description": null,
+      "rating": 5,
+      "created_at": "2025-07-08 19:53:28",
+      "updated_at": "2025-07-08 19:53:28"
+   }
+]

@@ -1,4 +1,6 @@
 <div class="space-y-6">
+
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
             <label for="werkgever" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Werkgever</label>
@@ -32,6 +34,7 @@
     </div>
 
     <div>
+
         <label for="beschrijving" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Beschrijving</label>
         <textarea id="beschrijving" name="beschrijving" rows="4" class="mt-1 w-full px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded">{{ old('beschrijving', $workExperience->beschrijving ?? '') }}</textarea>
     </div>
@@ -39,8 +42,9 @@
     <div>
         <label for="afbeelding" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Afbeelding</label>
         <input type="file" id="afbeelding" name="afbeelding" class="mt-1 text-gray-800 dark:text-gray-100">
-        @if (!empty($workExperience) && $workExperience->getFirstMediaUrl('afbeelding'))
-            <img src="{{ $workExperience->getFirstMediaUrl('afbeelding') }}" class="mt-2 max-w-xs rounded">
+
+        @if (!empty($workExperience) && $workExperience->image())
+            <img src="{{ $workExperience->imageUrl() }}" class="mt-2 max-w-xs rounded">
         @endif
     </div>
 </div>

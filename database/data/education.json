@@ -1,0 +1,32 @@
+[
+   {
+      "id": "1",
+      "opleiding": "Havo",
+      "instituut": "Blaise pascal (Scala rietvelden)",
+      "startdatum": "2006-07-01",
+      "einddatum": "2013-01-07",
+      "beschrijving": "Mijn middelbare schoolperiode kende een hobbelig begin: ik startte op het havo/vwo, maar had in de eerste jaren moeite met motivatie en discipline. Daardoor ben ik afgezakt naar het mavo-niveau. Op de mavo heb ik mezelf herpakt en mijn focus hervonden. Dankzij die ommekeer kon ik succesvol doorstromen naar de havo, waar ik mijn diploma met ruime voldoendes heb behaald. Deze periode heeft mij geleerd hoe belangrijk eigen inzet en doelgerichtheid zijn.",
+      "created_at": "2025-06-18 23:08:02",
+      "updated_at": "2025-06-18 23:20:19"
+   },
+   {
+      "id": "2",
+      "opleiding": "Internation Business and Management Studies",
+      "instituut": "Hogeschool Rotterdam",
+      "startdatum": "2013-07-01",
+      "einddatum": "2014-07-01",
+      "beschrijving": "International Business and Management Studies is een brede economische hbo-opleiding gericht op internationale handel, marketing en bedrijfsvoering. Tijdens het eerste jaar maakte ik kennis met onderwerpen als exportstrategieën, interculturele communicatie en organisatiekunde. Hoewel ik waardevolle inzichten heb opgedaan, merkte ik al snel dat de inhoud en aanpak van de opleiding niet goed aansloten bij mij.",
+      "created_at": "2025-06-18 23:11:45",
+      "updated_at": "2025-06-18 23:11:45"
+   },
+   {
+      "id": "3",
+      "opleiding": "HBO Business Studies (Specialisering logistiek)",
+      "instituut": "Inholland Rotterdam",
+      "startdatum": "2014-07-01",
+      "einddatum": "2017-07-01",
+      "beschrijving": "Tijdens deze hbo-opleiding verdiepte ik mij in bedrijfskunde, ondernemerschap en supply chain management. In de laatste fase volgde ik de specialisatie Logistiek aan de vestiging in Haarlem, met een sterke focus op luchtvaartlogistiek en internationale goederenstromen. Hoewel ik brede kennis heb opgedaan binnen het vakgebied, heb ik de opleiding uiteindelijk voortijdig moeten beëindigen. In 2016 startte ik mijn eigen bedrijf, dat in korte tijd sterk groeide. Het combineren van een fulltime afstudeerstage met mijn ondernemersverantwoordelijkheden bleek op dat moment niet haalbaar.",
+      "created_at": "2025-06-18 23:17:49",
+      "updated_at": "2025-06-18 23:17:49"
+   }
+]

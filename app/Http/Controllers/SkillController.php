@@ -29,11 +29,14 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'rating' => 'required|integer|min:1|max:10',
+            'rating' => 'required|numeric|min:1|max:10',
             'image' => 'nullable|image|max:2048',
+            'type' => 'required|in:rating,tag,other',
+
         ]);
 
         $skill = Skill::create($validated);
@@ -69,8 +72,10 @@ class SkillController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'rating' => 'required|integer|min:1|max:10',
+            'rating' => 'required|numeric|min:1|max:10',
             'image' => 'nullable|image|max:2048',
+            'type' => 'required|in:rating,tag,other',
+
         ]);
 
         $skill->update($validated);

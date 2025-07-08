@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    height: 30px;
+    width: auto;
+    display: inline-block;
+    transform: scaleX(-1) translate(-50%, -50%);
+    transform-origin: top left;
+}
+
+
+#custom-cursor svg {
+
+    height: 100%;
+    width: auto;
+    display: block;
+}

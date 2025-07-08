@@ -1,0 +1,32 @@
+[
+   {
+      "id": "1",
+      "werkgever": "Jumbo Supermarkten",
+      "functie": "Teamleider",
+      "startdatum": "2010-01-01",
+      "einddatum": "2018-12-31",
+      "beschrijving": "Na mijn start als bijbaanmedewerker ben ik binnen een jaar doorgegroeid naar de rol van teamleider. In deze functie werd ik door de regiomanager actief ingezet op verschillende filialen met een extra behoefte aan structuur, klantgerichtheid en kwaliteitsverbetering. Dit betrof zowel nieuwe vestigingen als filialen waar de bestaande werkmentaliteit niet strookte met de kwaliteitsnormen van Jumbo.\r\n\r\nMijn aanpak was altijd gericht op het verhogen van klanttevredenheid, het verbeteren van interne processen en het motiveren van collega’s. Dankzij mijn inzet en flexibiliteit heb ik meerdere filialen kunnen ondersteunen in het opzetten of herstructureren van een sterk, klantgericht team.",
+      "created_at": "2025-06-18 18:13:10",
+      "updated_at": "2025-06-18 18:13:10"
+   },
+   {
+      "id": "2",
+      "werkgever": "SitiWeb",
+      "functie": "Eigenaar / Technisch Specialist",
+      "startdatum": "2016-08-01",
+      "einddatum": "2024-10-01",
+      "beschrijving": "Als oprichter en eigenaar van Sitiweb heb ik gedurende acht jaar totaaloplossingen geleverd aan ondernemers met websites en webshops. De focus lag op zowel het verbeteren van websites als het technisch optimaliseren van hostingomgevingen.\r\n\r\nIk was verantwoordelijk voor de technische infrastructuur, het opzetten en beheren van hostingomgevingen (inclusief VPS-servers), en het uitvoeren van maatwerkoptimalisaties. Daarnaast adviseerde ik klanten actief over verbeteringen op het gebied van snelheid, veiligheid en gebruikservaring.\r\n\r\nOnder mijn leiding groeide Sitiweb uit tot een gewaardeerde partij binnen het MKB, met een sterke focus op kwaliteit en persoonlijke service. In 2024 heb ik besloten om een stap terug te doen, omdat het bedrijf dusdanig was gegroeid dat het met een klein team niet langer optimaal beheersbaar was.",
+      "created_at": "2025-07-08 18:22:12",
+      "updated_at": "2025-07-08 18:22:12"
+   },
+   {
+      "id": "3",
+      "werkgever": "InternetToday",
+      "functie": "Senior Developer",
+      "startdatum": "2024-10-01",
+      "einddatum": null,
+      "beschrijving": "Binnen InternetToday vervul ik een sleutelrol als senior developer met een brede technische verantwoordelijkheid. Ik heb de werkstructuur binnen het ontwikkelteam geoptimaliseerd door het opzetten van uitgebreide monitoring- en analysetools, wat direct heeft bijgedragen aan een efficiëntere en kwalitatievere werkwijze binnen het team.\r\n\r\nDaarnaast fungeer ik als brug tussen de developmentafdeling en de serverbeheerafdeling. Dankzij mijn diepgaande kennis van Linux, hosting en infrastructuur ben ik in staat om complexe technische vraagstukken snel op te lossen en oplossingen te ontwikkelen die doorgaans buiten de scope van het developmentteam vallen. Deze veelzijdigheid maakt mij een waardevolle schakel binnen het bedrijf.",
+      "created_at": "2025-07-08 18:29:36",
+      "updated_at": "2025-07-08 18:31:59"
+   }
+]

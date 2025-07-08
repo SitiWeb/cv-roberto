@@ -11,5 +11,14 @@ class Skill extends Model implements HasMedia
 {
     use InteractsWithMedia;
 
-    protected $fillable = ['title', 'description', 'rating'];
+    protected $fillable = ['title', 'description', 'rating', 'type'];
+
+    public function image()
+    {
+        return $this->getFirstMedia('image');
+    }
+    public function imageUrl()
+    {
+        return $this->image() ? $this->image()->getUrl() : null;
+    }
 }

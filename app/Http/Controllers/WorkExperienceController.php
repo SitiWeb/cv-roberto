@@ -31,7 +31,7 @@ class WorkExperienceController extends Controller
         $experience = WorkExperience::create($data);
 
         if ($request->hasFile('afbeelding')) {
-            $experience->addMediaFromRequest('afbeelding')->toMediaCollection('afbeelding');
+            $experience->addMediaFromRequest('afbeelding')->toMediaCollection('image');
         }
 
         return redirect()->route('work-experiences.index')->with('success', 'Ervaring toegevoegd.');
@@ -58,11 +58,13 @@ class WorkExperienceController extends Controller
             'afbeelding' => 'nullable|image|max:2048',
         ]);
 
+
+
         $workExperience->update($data);
 
         if ($request->hasFile('afbeelding')) {
-            $workExperience->clearMediaCollection('afbeelding');
-            $workExperience->addMediaFromRequest('afbeelding')->toMediaCollection('afbeelding');
+            $workExperience->clearMediaCollection('image');
+            $workExperience->addMediaFromRequest('afbeelding')->toMediaCollection('image');
         }
 
         return redirect()->route('work-experiences.index')->with('success', 'Ervaring bijgewerkt.');

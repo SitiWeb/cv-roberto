@@ -16,4 +16,13 @@ class Education extends Model implements HasMedia
         'einddatum',
         'beschrijving',
     ];
+
+    public function image()
+    {
+        return $this->getFirstMedia('image');
+    }
+    public function imageUrl()
+    {
+        return $this->image() ? $this->image()->getUrl() : null;
+    }
 }

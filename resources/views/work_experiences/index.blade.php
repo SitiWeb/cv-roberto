@@ -7,7 +7,7 @@
         </div>
 
         @if (session('success'))
-            <div class="mb-4 text-green-700 dark:text-green-400">{{ session('success') }}</div>
+            <div class="mb-4 text-green-700 dark:text-sitiweb-green">{{ session('success') }}</div>
         @endif
 
         <div class="space-y-4">
@@ -20,7 +20,7 @@
                             <p class="mt-2 text-gray-700 dark:text-gray-200">{{ $experience->beschrijving }}</p>
                         </div>
                         <div class="flex gap-2">
-                            <a href="{{ route('work-experiences.edit', $experience) }}" class="text-blue-500 hover:underline">Bewerken</a>
+                            <a href="{{ route('work-experiences.edit', $experience) }}" class="text-sitiweb-green hover:underline">Bewerken</a>
                             <form method="POST" action="{{ route('work-experiences.destroy', $experience) }}">
                                 @csrf
                                 @method('DELETE')
@@ -28,8 +28,8 @@
                             </form>
                         </div>
                     </div>
-                    @if ($experience->getFirstMediaUrl('afbeelding'))
-                        <img src="{{ $experience->getFirstMediaUrl('afbeelding') }}" class="mt-4 max-w-xs rounded">
+                    @if ($experience->image())
+                        <img src="{{ $experience->imageUrl() }}" class="mt-4 max-w-xs rounded">
                     @endif
                 </div>
             @endforeach

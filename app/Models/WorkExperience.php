@@ -18,5 +18,14 @@ class WorkExperience extends Model implements HasMedia
         'beschrijving',
     ];
 
+    public function image()
+    {
+        return $this->getFirstMedia('image');
+    }
+    public function imageUrl()
+    {
+        return $this->image() ? $this->image()->getUrl() : null;
+    }
+
     // Als je mediaconversies of image handling wil: hier kun je die later toevoegen
 }

@@ -32,7 +32,7 @@ class EducationController extends Controller
         $education = Education::create($data);
 
         if ($request->hasFile('afbeelding')) {
-            $education->addMediaFromRequest('afbeelding')->toMediaCollection('afbeelding');
+            $education->addMediaFromRequest('afbeelding')->toMediaCollection('image');
         }
 
         return redirect()->route('educations.index')->with('success', 'Opleiding toegevoegd.');
@@ -62,8 +62,9 @@ class EducationController extends Controller
         $education->update($data);
 
         if ($request->hasFile('afbeelding')) {
-            $education->clearMediaCollection('afbeelding');
-            $education->addMediaFromRequest('afbeelding')->toMediaCollection('afbeelding');
+            $education->clearMediaCollection('image');
+
+            $education->addMediaFromRequest('afbeelding')->toMediaCollection('image');
         }
 
         return redirect()->route('educations.index')->with('success', 'Opleiding bijgewerkt.');
