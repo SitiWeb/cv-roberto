@@ -16,13 +16,14 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::updateOrCreate(
-            ['email' => env('ADMIN_EMAIL')],
+            ['email' => config('admin.email')],
             [
-                'name' => env('ADMIN_NAME'),
-                'email' => env('ADMIN_EMAIL'),
-                'password' => Hash::make(env('ADMIN_PASSWORD')),
+                'name' => config('admin.name'),
+                'email' => config('admin.email'),
+                'password' => Hash::make(config('admin.password')),
             ]
         );
+
 
             // Andere seeders uitvoeren
         $this->call([
