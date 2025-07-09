@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Personalia;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 
 class PersonaliaSeeder extends Seeder
@@ -12,8 +12,9 @@ class PersonaliaSeeder extends Seeder
     {
         $path = database_path('data/personalia.json');
 
-        if (!File::exists($path)) {
+        if (! File::exists($path)) {
             $this->command->warn("Bestand {$path} bestaat niet, seeder overgeslagen.");
+
             return;
         }
 
@@ -33,6 +34,6 @@ class PersonaliaSeeder extends Seeder
             ]);
         }
 
-        $this->command->info(count($data) . ' personalia-records geïmporteerd.');
+        $this->command->info(count($data).' personalia-records geïmporteerd.');
     }
 }

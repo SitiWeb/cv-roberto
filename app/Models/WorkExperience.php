@@ -22,6 +22,7 @@ class WorkExperience extends Model implements HasMedia
     {
         return $this->getFirstMedia('image');
     }
+
     public function imageUrl()
     {
         return $this->image() ? $this->image()->getUrl() : null;

@@ -13,6 +13,7 @@ class SkillController extends Controller
     public function index()
     {
         $skills = Skill::latest()->get();
+
         return view('skills.index', compact('skills'));
     }
 

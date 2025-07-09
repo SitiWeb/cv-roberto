@@ -10,6 +10,7 @@ class PersonaliaController extends Controller
     public function index()
     {
         $personalia = Personalia::all();
+
         return view('personalia.index', compact('personalia'));
     }
 
@@ -40,7 +41,6 @@ class PersonaliaController extends Controller
 
         return view('personalia.edit', ['personalia' => $personalium]);
     }
-
 
     public function update(Request $request, Personalia $personalium)
     {

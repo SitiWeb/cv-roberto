@@ -12,7 +12,7 @@ class EducationSeeder extends Seeder
     {
         $path = database_path('data/education.json');
 
-        if (!File::exists($path)) {
+        if (! File::exists($path)) {
             return;
         }
 

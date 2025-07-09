@@ -14,10 +14,15 @@ class NotifyTelegramAboutContactMessage implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected string $name;
+
     protected string $message;
+
     protected string $ip;
+
     protected string $userAgent;
+
     protected string $email;
+
     protected string $phone;
 
     public function __construct(string $name, string $message, string $ip, string $userAgent, ?string $email = null, ?string $phone = null)
@@ -29,7 +34,6 @@ class NotifyTelegramAboutContactMessage implements ShouldQueue
         $this->email = $email;
         $this->phone = $phone;
     }
-
 
     public function handle()
     {
@@ -51,7 +55,7 @@ class NotifyTelegramAboutContactMessage implements ShouldQueue
 🕒 Tijdstip: *{now()->format('d-m-Y H:i')}*
 TEXT;
 
-        Http::post("https://api.telegram.org/bot" . config('services.telegram.bot_token') . "/sendMessage", [
+        Http::post('https://api.telegram.org/bot'.config('services.telegram.bot_token').'/sendMessage', [
             'chat_id' => config('services.telegram.chat_id'),
             'text' => $text,
             'parse_mode' => 'Markdown',

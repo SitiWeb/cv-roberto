@@ -10,6 +10,7 @@ class EducationController extends Controller
     public function index()
     {
         $educations = Education::with('media')->latest()->get();
+
         return view('educations.index', compact('educations'));
     }
 
@@ -73,6 +74,7 @@ class EducationController extends Controller
     public function destroy(Education $education)
     {
         $education->delete();
+
         return redirect()->route('educations.index')->with('success', 'Opleiding verwijderd.');
     }
 }

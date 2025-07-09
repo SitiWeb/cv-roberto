@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -13,8 +12,6 @@ class ContactController extends Controller
             'name' => 'required|max:255',
             'message' => 'required|max:5000',
         ]);
-
-
 
         return response()->json(['status' => 'success']);
     }

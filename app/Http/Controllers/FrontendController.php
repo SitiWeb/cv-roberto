@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\NotifyTelegramAboutContactMessage;
+use App\Jobs\NotifyTelegramAboutPersonaliaClick;
 use App\Models\Education;
 use App\Models\Personalia;
 use App\Models\Skill;
 use App\Models\WorkExperience;
 use Illuminate\Http\Request;
-use App\Jobs\NotifyTelegramAboutPersonaliaClick;
-use App\Jobs\NotifyTelegramAboutContactMessage;
 
 class FrontendController extends Controller
 {
@@ -37,25 +37,24 @@ class FrontendController extends Controller
         ]);
     }
 
-   public function message(Request $request)
-{
-    $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'message' => 'required|string|max:5000',
-        'email' => 'nullable|email|max:255',
-        'phone' => 'nullable|string|max:50',
-    ]);
+    public function message(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'message' => 'required|string|max:5000',
+            'email' => 'nullable|email|max:255',
+            'phone' => 'nullable|string|max:50',
+        ]);
 
-    NotifyTelegramAboutContactMessage::dispatch(
-        $validated['name'],
-        $validated['message'],
-        $request->ip(),
-        $request->userAgent(),
-        $validated['email'] ?? null,
-        $validated['phone'] ?? null
-    );
+        NotifyTelegramAboutContactMessage::dispatch(
+            $validated['name'],
+            $validated['message'],
+            $request->ip(),
+            $request->userAgent(),
+            $validated['email'] ?? null,
+            $validated['phone'] ?? null
+        );
 
-    return response()->json(['status' => 'success']);
-}
-
+        return response()->json(['status' => 'success']);
+    }
 }

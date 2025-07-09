@@ -12,8 +12,9 @@ class MediaSeeder extends Seeder
     {
         $path = database_path('data/media.json');
 
-        if (!File::exists($path)) {
-            $this->command->warn("media.json niet gevonden, seeding overgeslagen.");
+        if (! File::exists($path)) {
+            $this->command->warn('media.json niet gevonden, seeding overgeslagen.');
+
             return;
         }
 

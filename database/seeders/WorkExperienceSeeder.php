@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\WorkExperience;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 
 class WorkExperienceSeeder extends Seeder
@@ -13,8 +13,9 @@ class WorkExperienceSeeder extends Seeder
         $jsonPath = database_path('data/work_experiences.json');
 
         // Bestaat het JSON-bestand?
-        if (!File::exists($jsonPath)) {
+        if (! File::exists($jsonPath)) {
             $this->command->warn("❌ Bestand $jsonPath niet gevonden. Seeder overgeslagen.");
+
             return;
         }
 
@@ -40,6 +41,6 @@ class WorkExperienceSeeder extends Seeder
             );
         }
 
-        $this->command->info("✅ Werkervaringen succesvol geïmporteerd.");
+        $this->command->info('✅ Werkervaringen succesvol geïmporteerd.');
     }
 }

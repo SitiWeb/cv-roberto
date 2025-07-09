@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Skill;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 
 class SkillSeeder extends Seeder
@@ -12,7 +12,7 @@ class SkillSeeder extends Seeder
     {
         $path = database_path('data/skills.json');
 
-        if (!File::exists($path)) {
+        if (! File::exists($path)) {
             return;
         }
 

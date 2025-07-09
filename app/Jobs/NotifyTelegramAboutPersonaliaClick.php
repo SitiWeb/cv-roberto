@@ -15,7 +15,9 @@ class NotifyTelegramAboutPersonaliaClick implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $personalia;
+
     protected $ip;
+
     protected $userAgent;
 
     public function __construct(Personalia $personalia, $ip, $userAgent)
@@ -37,7 +39,7 @@ User Agent: `{$this->userAgent}`
 📅 Tijdstip: *{$this->personalia->updated_at->format('d-m-Y H:i')}*
 TEXT;
 
-        Http::post("https://api.telegram.org/bot" . config('services.telegram.bot_token') . "/sendMessage", [
+        Http::post('https://api.telegram.org/bot'.config('services.telegram.bot_token').'/sendMessage', [
             'chat_id' => config('services.telegram.chat_id'),
             'text' => $message,
             'parse_mode' => 'Markdown',

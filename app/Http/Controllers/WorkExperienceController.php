@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\WorkExperience;
@@ -9,6 +10,7 @@ class WorkExperienceController extends Controller
     public function index()
     {
         $experiences = WorkExperience::with('media')->latest()->get();
+
         return view('work_experiences.index', compact('experiences'));
     }
 
@@ -58,8 +60,6 @@ class WorkExperienceController extends Controller
             'afbeelding' => 'nullable|image|max:2048',
         ]);
 
-
-
         $workExperience->update($data);
 
         if ($request->hasFile('afbeelding')) {
@@ -73,6 +73,7 @@ class WorkExperienceController extends Controller
     public function destroy(WorkExperience $workExperience)
     {
         $workExperience->delete();
+
         return redirect()->route('work-experiences.index')->with('success', 'Ervaring verwijderd.');
     }
 }
