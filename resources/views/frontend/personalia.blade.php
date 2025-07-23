@@ -16,7 +16,7 @@
 
                         // 3. Maskeren vanaf derde teken, spaties zichtbaar houden
                         $masked = '';
-                        $chars = mb_str_split($cleanValue); // Split veilig per karakter
+                        $chars = mb_str_split($cleanValue);
 
                         foreach ($chars as $i => $char) {
                             if ($i < 2) {

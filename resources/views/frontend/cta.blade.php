@@ -21,7 +21,7 @@
 </section>
 
 <!-- Contact Modal -->
-<div id="contact-modal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
+<div id="contact-modal" class="fixed inset-0 z-50 hidden bg-black/50 items-center justify-center">
     <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-lg max-w-md w-full p-6 space-y-4">
         <h3 class="text-xl font-semibold text-zinc-800 dark:text-white">Stuur een bericht</h3>
         <form id="contact-form" class="space-y-4">
@@ -66,10 +66,12 @@
     <script>
         function openContactModal() {
             document.getElementById('contact-modal').classList.remove('hidden');
+            document.getElementById('contact-modal').classList.add('flex');
         }
 
         function closeContactModal() {
             document.getElementById('contact-modal').classList.add('hidden');
+            document.getElementById('contact-modal').classList.remove('flex');
         }
 
         document.getElementById('contact-form').addEventListener('submit', async function(e) {
