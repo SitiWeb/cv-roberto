@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EducationRequest;
 use App\Models\Education;
 use Illuminate\Http\Request;
 
@@ -19,22 +20,11 @@ class EducationController extends Controller
         return view('educations.create');
     }
 
-    public function store(Request $request)
+    public function store(EducationRequest $request)
     {
-        $data = $request->validate([
-            'opleiding' => 'required|string|max:255',
-            'instituut' => 'required|string|max:255',
-            'startdatum' => 'required|date',
-            'einddatum' => 'nullable|date|after_or_equal:startdatum',
-            'beschrijving' => 'nullable|string',
-            'afbeelding' => 'nullable|image|max:2048',
-        ]);
+        $education = Education::create($request->validated());
 
-        $education = Education::create($data);
-
-        if ($request->hasFile('afbeelding')) {
-            $education->addMediaFromRequest('afbeelding')->toMediaCollection('image');
-        }
+        $this->handleImageUpload($request, $education);
 
         return redirect()->route('educations.index')->with('success', 'Opleiding toegevoegd.');
     }
@@ -49,32 +39,31 @@ class EducationController extends Controller
         return view('educations.edit', compact('education'));
     }
 
-    public function update(Request $request, Education $education)
+    public function update(EducationRequest $request, Education $education)
     {
-        $data = $request->validate([
-            'opleiding' => 'required|string|max:255',
-            'instituut' => 'required|string|max:255',
-            'startdatum' => 'required|date',
-            'einddatum' => 'nullable|date|after_or_equal:startdatum',
-            'beschrijving' => 'nullable|string',
-            'afbeelding' => 'nullable|image|max:2048',
-        ]);
+        $education->update($request->validated());
 
-        $education->update($data);
-
-        if ($request->hasFile('afbeelding')) {
-            $education->clearMediaCollection('image');
-
-            $education->addMediaFromRequest('afbeelding')->toMediaCollection('image');
-        }
+        $this->handleImageUpload($request, $education, true);
 
         return redirect()->route('educations.index')->with('success', 'Opleiding bijgewerkt.');
     }
 
     public function destroy(Education $education)
     {
+        $education->clearMediaCollection('image');
         $education->delete();
 
         return redirect()->route('educations.index')->with('success', 'Opleiding verwijderd.');
+    }
+
+    protected function handleImageUpload(Request $request, Education $education, bool $replace = false): void
+    {
+        if ($request->hasFile('afbeelding')) {
+            if ($replace) {
+                $education->clearMediaCollection('image');
+            }
+
+            $education->addMediaFromRequest('afbeelding')->toMediaCollection('image');
+        }
     }
 }

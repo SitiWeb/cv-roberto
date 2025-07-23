@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Personalia;
 use Illuminate\Http\Request;
+use App\Http\Requests\PersonaliaRequest;
 
 class PersonaliaController extends Controller
 {
@@ -19,14 +20,9 @@ class PersonaliaController extends Controller
         return view('personalia.create');
     }
 
-    public function store(Request $request)
+    public function store(PersonaliaRequest $request)
     {
-        $validated = $request->validate([
-            'key' => 'required|string|max:255',
-            'value' => 'required|string|max:255',
-            'hidden' => 'nullable|boolean',
-            'icon' => 'nullable|string|max:255',
-        ]);
+        $validated = $request->validated();
 
         Personalia::create([
             ...$validated,
@@ -44,18 +40,12 @@ class PersonaliaController extends Controller
 
     public function update(Request $request, Personalia $personalium)
     {
-        $validated = $request->validate([
-            'key' => 'required|string|max:255',
-            'value' => 'required|string|max:255',
-            'hidden' => 'nullable|boolean',
-            'icon' => 'nullable|string|max:255',
-        ]);
+        $validated = $request->validated();
 
         $personalium->update([
             ...$validated,
             'hidden' => $request->boolean('hidden'),
         ]);
-
         return redirect()->route('personalia.index')->with('success', 'Persoonlijk item bijgewerkt.');
     }
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\WorkExperience;
 use Illuminate\Http\Request;
+use App\Http\Requests\WorkExperienceRequest;
+
 
 class WorkExperienceController extends Controller
 {
@@ -19,18 +21,9 @@ class WorkExperienceController extends Controller
         return view('work_experiences.create');
     }
 
-    public function store(Request $request)
+    public function store(WorkExperienceRequest $request)
     {
-        $data = $request->validate([
-            'werkgever' => 'required|string|max:255',
-            'functie' => 'required|string|max:255',
-            'startdatum' => 'required|date',
-            'einddatum' => 'nullable|date|after_or_equal:startdatum',
-            'beschrijving' => 'nullable|string',
-            'afbeelding' => 'nullable|image|max:2048',
-        ]);
-
-        $experience = WorkExperience::create($data);
+        $experience = WorkExperience::create($request->validated());
 
         if ($request->hasFile('afbeelding')) {
             $experience->addMediaFromRequest('afbeelding')->toMediaCollection('image');
@@ -49,18 +42,9 @@ class WorkExperienceController extends Controller
         return view('work_experiences.edit', compact('workExperience'));
     }
 
-    public function update(Request $request, WorkExperience $workExperience)
+    public function update(WorkExperienceRequest $request, WorkExperience $workExperience)
     {
-        $data = $request->validate([
-            'werkgever' => 'required|string|max:255',
-            'functie' => 'required|string|max:255',
-            'startdatum' => 'required|date',
-            'einddatum' => 'nullable|date|after_or_equal:startdatum',
-            'beschrijving' => 'nullable|string',
-            'afbeelding' => 'nullable|image|max:2048',
-        ]);
-
-        $workExperience->update($data);
+        $workExperience->update($request->validated());
 
         if ($request->hasFile('afbeelding')) {
             $workExperience->clearMediaCollection('image');
@@ -72,6 +56,7 @@ class WorkExperienceController extends Controller
 
     public function destroy(WorkExperience $workExperience)
     {
+        $workExperience->clearMediaCollection('image');
         $workExperience->delete();
 
         return redirect()->route('work-experiences.index')->with('success', 'Ervaring verwijderd.');

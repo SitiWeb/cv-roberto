@@ -14,7 +14,7 @@ zien — inclusief slimme automatisering, logging en Telegram-notificaties voor 
 
 ## 🧰 Techniek & Stack
 
-- **Framework:** Laravel 11
+- **Framework:** Laravel 12
 - **Frontend:** Tailwind CSS, Blade
 - **DevOps-integraties:** Telegram alerts, Healthchecks, custom logging
 - **CI/CD-ready:** Ondersteuning voor deploy hooks en jobs

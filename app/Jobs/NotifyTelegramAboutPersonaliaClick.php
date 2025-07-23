@@ -36,7 +36,7 @@ Naam: {$this->personalia->value}
 IP: {$this->ip}
 User Agent: `{$this->userAgent}`
 
-📅 Tijdstip: *{$this->personalia->updated_at->format('d-m-Y H:i')}*
+📅 Tijdstip: *{now()->format('d-m-Y H:i')}*
 TEXT;
 
         Http::post('https://api.telegram.org/bot'.config('services.telegram.bot_token').'/sendMessage', [
